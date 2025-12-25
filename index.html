@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ถึงอ้วนสุดที่รักของหนู 💖</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #ffe6f0;
+        }
+
+        /* ===== PASSWORD ===== */
+        #lock {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lock-box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+        }
+
+        .lock-box input {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            width: 200px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .lock-box button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            background: #ff7eb3;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* ===== MAIN ===== */
+        #main {
+            display: none;
+        }
+
+        /* PAGE STYLE */
+        .page {
+            min-height: 100vh;
+            /* สำคัญมาก แก้ซ้อน */
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .page img,
+        .page video {
+            width: 90%;
+            max-width: 360px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+        }
+
+        .page h2 {
+            color: #ff4d88;
+            margin-bottom: 15px;
+        }
+
+        .page p {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            max-width: 360px;
+            line-height: 1.7;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+        }
+
+        /* COUNTDOWN */
+        .countdown {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .time {
+            background: white;
+            padding: 12px;
+            border-radius: 15px;
+            width: 70px;
+        }
+
+        /* MUSIC (ซ่อน) */
+        .music iframe {
+            display: none;
+        }
+
+        /* ===== FLOATING HEARTS ===== */
+.hearts{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:999;
+}
+.heart{
+  position:absolute;
+  bottom:-20px;
+  font-size:18px;
+  animation:floatHeart linear forwards;
+  opacity:.8;
+}
+@keyframes floatHeart{
+  0%{transform:translateY(0) scale(1);opacity:0}
+  10%{opacity:1}
+  100%{transform:translateY(-100vh) scale(1.8);opacity:0}
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div class="hearts"></div>
+
+
+    <!-- ===== PASSWORD ===== -->
+    <div id="lock">
+        <div class="lock-box">
+            <h2>🔐 ใส่รหัสก่อนนะอ้วน</h2>
+            <input type="password" id="pass" placeholder="รหัส 6 หลัก">
+            <br>
+            <button onclick="checkPass()">เข้าไปเลย 💖</button>
+        </div>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div id="main">
+
+        <!-- PAGE 1 -->
+        <section class="page">
+            <h2>This page is made for you 💕</h2>
+            <p>เลื่อนลงไปเรื่อยๆนะอ้วน 💖</p>
+        </section>
+
+        <!-- PAGE 2 : COUNTDOWN -->
+        <section class="page">
+            <h2>นับถอยหลัง ครบรอบ 7 เดือน</h2>
+            <div class="countdown">
+                <div class="time">
+                    <div id="d">0</div>วัน
+                </div>
+                <div class="time">
+                    <div id="h">0</div>ชม.
+                </div>
+                <div class="time">
+                    <div id="m">0</div>นาที
+                </div>
+                <div class="time">
+                    <div id="s">0</div>วิ
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3 -->
+        <section class="page">
+            <img src="images/pic-10.jpg">
+            <p>✨ Happy Anniversary 7 months นะงับอ้วน 💕</p>
+        </section>
+
+        <!-- PAGE 4 -->
+        <section class="page">
+            <img src="images/pic-3.jpg">
+            <p>หนูรักอ้วนที่สุดดดดดดดดด อยากอยู่กับอ้วนไปนานๆเยย🐷💖</p>
+        </section>
+
+        <!-- PAGE 5 -->
+        <section class="page">
+            <img src="images/pic-8.jpg">
+            <p>ขอบคุณที่น่ารักกับหนูมาตลอดเลยนะอ้วน หนูก็จะทำตัวน่ารักกับอ้วนตลอดไปเยย 🥺💕</p>
+        </section>
+
+        <section class="page">
+            <!-- 👉 วางรูปตรงนี้ -->
+            <img src="images/pic-2.jpg" alt="รูปของเรา">
+            <p> ฝาแฝดหมู 5555</p>
+
+            <!-- PAGE 5 -->
+            <section class="page">
+                <img src="images/pic-5.jpg">
+                <p>สุดหล่อของหนูเก่งที่สุดในโลก หนูอยู่ตรงนี้ข้างๆอ้วนเสมอนะ💕</p>
+            </section>
+
+        </section>
+
+
+        <!-- PAGE 6 : VIDEO -->
+        <section class="page">
+            <h2>🎥</h2>
+
+            <video controls playsinline>
+                <source src="images/video-1.mp4" type="video/mp4">
+            </video>
+            <p>อยากอยู่กินแซ่บกับอ้วนไปนานๆ อยู่กินแซ่บด้วยกันตลอดไปเยย 💕</p>
+
+            <video controls playsinline>
+                <source src="images/video-7.mp4" type="video/mp4">
+            </video>
+            <p>
+               You are my favorite person.💖อ้วนเปิดดูด้วยย<br>
+
+            </p>
+
+            <video controls playsinline>
+                <source src="images/video-5.mp4" type="video/mp4">
+            </video>
+            <p>แฟนใครเนี่ย น่ารักที่สุดเลยยยยย555 🥰</p>
+
+            <video controls playsinline>
+                <source src="images/video-6.mp4" type="video/mp4">
+                มือถืออ้วนไม่รองรับวิดีโอนี้นะ 😅
+            </video>
+
+            <p>
+                ขอบคุณที่ไปเที่ยวกับหนู พาหนูไปทุกที่ตามใจหนูตลอด หนูมีความสุขที่สุดในโลกก
+            </p>
+            <video controls playsinline>
+                <source src="images/video-8 - Trim.mp4" type="video/mp4">
+                มือถืออ้วนไม่รองรับวิดีโอนี้นะ 😅
+            </video>
+
+            <p>
+                แอบเขินนนนน555
+            </p>
+        </section>
+
+        <!-- MUSIC -->
+        <div class="music">
+            <iframe src="https://www.youtube.com/embed/DSrYNw3gYs5?autoplay=1&mute=1&loop=1&playlist=DSrYNw3gYs5"
+                allow="autoplay">
+            </iframe>
+        </div>
+
+    </div>
+<section class="page">
+  <h2>💌 From my heart</h2>
+  <div class="final-note">
+    <p>
+      ถึงอ้วนของหนู 💕<br><br>
+      ขอบคุณที่เข้ามาเป็นความสุขในทุกๆวันของหนู  
+      อยู่กับหนูไปนานๆนะงับที่รัก   
+      ขอบคุณที่คอยให้กำลังใจหนูตลอดเลยยย ชมหนูตลอดด้วย หนูอยู่ตรงนี้ข้างๆอ้วนเสมอนะ
+      เจอเรื่องอะไรอ้วนยังมีหนูอยู่ตรงนี้เสมอ ไม่ต้องกลัวเลยหนูจะคอยกอดอ้วนเองง
+      ไม่ต้องกลัวหนูไปไหนเลยหนูจะปกป้องที่รักของหนูเอง555 หนูสัญญาว่าจะทำตัวให้น่ารักขึ้นไม่ทำตัวไม่น่ารักกับอ้วนแล้ว
+      รักนะคะคนเก่งของหนู 🐷💖<br><br>
+       
+       I still choose you — today and always.🫶
+    </p>
+  </div>
+</section>
+
+    <script>
+        function checkPass() {
+            if (document.getElementById("pass").value === "260741") {
+                document.getElementById("lock").style.display = "none";
+                document.getElementById("main").style.display = "block";
+            } else {
+                alert("รหัสไม่ถูกนะอ้วน 😅");
+            }
+        }
+
+        /* COUNTDOWN */
+        const target = new Date("2025-12-27T00:00:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = target - now;
+            if (diff > 0) {
+                d.innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+                h.innerText = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                m.innerText = Math.floor((diff / (1000 * 60)) % 60);
+                s.innerText = Math.floor((diff / 1000) % 60);
+            }
+        }, 1000);
+    </script>
+    <script>
+const hearts=document.querySelector(".hearts");
+function createHeart(){
+  const h=document.createElement("div");
+  h.className="heart";
+  h.textContent=["💖","💕","💗","❤️"][Math.floor(Math.random()*4)];
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=4+Math.random()*3+"s";
+  hearts.appendChild(h);
+  setTimeout(()=>h.remove(),7000);
+}
+setInterval(createHeart,600);
+</script>
+
+
+</body>
+
+</html>
